@@ -700,3 +700,6 @@ style:
     active: true
     excludeImports:
       - 'java.util.*'
+  UnusedPrivateProperty:
+    active: true
+    excludes: [ 'samples/**' ]
