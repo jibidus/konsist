@@ -161,11 +161,13 @@ jobs:
           java-version: 8
           distribution: 'corretto'
 
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
       - name: Publish Konsist Artifact To Local Maven Repository
         run: >
           ./gradlew publishToMavenLocal
           -P konsist.releaseTarget=local
-          -P org.gradle.java.installations.fromEnv=JAVA_HOME_21_arm64
 
       - name: Run Integration Test
         run: cd test-projects/konsist-declaration-tester/ && ./gradlew integrationTest
