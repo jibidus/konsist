@@ -36,12 +36,6 @@ jobs:
           java-version: 8
           distribution: 'corretto'
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          java-version: 21
-          distribution: 'corretto'
-
       - name: Publish Konsist Artifact To Local Maven Repository
         run: >
           ./gradlew publishToMavenLocal
