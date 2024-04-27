@@ -39,7 +39,6 @@ jobs:
       - name: Publish Konsist Artifact To Local Maven Repository
         run: >
           ./gradlew publishToMavenLocal
-          -P konsist.releaseTarget=local
 
       - name: Run Integration Test
         run: cd test-projects/konsist-declaration-tester/ && ./gradlew integrationTest
